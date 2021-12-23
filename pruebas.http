@@ -1,0 +1,262 @@
+
+@host=http://localhost:3000
+@id=6125ab25c8c74d0ef809a067
+@entidad=user
+GET {{host}}/{{entidad}}
+###
+POST {{host}}/{{entidad}}
+Content-Type: application/json
+
+{
+    "nombres":"Angel",
+    "dni":"71881339",
+    "apellidos":"Gonzalez",
+    "password":"12345",
+    "area":"Administracion",
+    "cedula":"Cedula 1",
+    "correo":"admin@gmail.com",
+    "rol":"administrador"
+}
+###
+POST {{host}}/{{entidad}}
+Content-Type: application/json
+
+{
+        "codigo":"001",
+        "nombre":"pintura Almacenes",
+        "usuario":"613e7e746486f42cb4996c76",
+        "transaciones":[],
+        "area":"Aceria",
+        "cedula":"cedula1",
+        "fechainicio":"",
+        "fechafin":"",
+        "descripcion":"Descripcion",
+        "estado":"pendiente"
+}
+
+
+###
+POST {{host}}/orderfoods
+Content-Type: application/json
+
+{
+    "codigo":"",
+    "usuario":"",
+    "productos":"",
+    "transaciones":[],
+    "area":"",
+    "cedula":"",
+    "fecha":"",
+    "descripcion":"",
+    "otrosproductos":[],
+    "estado":"pendiente"
+}
+   
+###
+
+GET {{host}}/{{entidad}}/{{id}}
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTNlN2U3NDY0ODZmNDJjYjQ5OTZjNzYiLCJyb2wiOiJhZG1pbmlzdHJhZG9yIiwiaWF0IjoxNjMxODAwOTEwLCJleHAiOjE2MzI3MDA5MTB9.fTo5OdCEJwX_zPMZql210_R76oIVWQ85S9khpscuhPc
+
+###
+PUT {{host}}/{{entidad}}/{{id}}
+Content-Type: application/json
+
+{
+    "nombres":"Angelito",
+    "apellidos":"Gonzalez",
+    "dni":71881347,
+    "direccion":"santa chimbote",
+    "correo":"angelgonzalez11@gmail.com",
+    "estado":"activo"
+}
+
+###
+
+DELETE  {{host}}/{{entidad}}/{{id}}
+###
+
+POST {{host}}/area
+
+Content-Type: application/json
+
+{
+   "areas":[
+    {
+        "area": "ACERIA",
+        "cedulas": [
+            "ACERIA",
+            "APOYO ACERIA",
+            "APOYO OPERACIONAL ACERIA",
+            "MANTENIMIENTO ELECTRICO ELECTRONICO ACERIA",
+            "MANTENIMIENTO MECANICO ACERIA",
+            "PATIO METALICO",
+            "PROCESOS ACERIA"
+        ]
+    },
+    {
+        "area": "ADMINISTRACION Y SEGURIDAD EMPRESARIAL",
+        "cedulas": [
+            "ADMINISTRACION",
+            "ADMINISTRACION Y SEGURIDAD EMPRESARIAL",
+            "SEGURIDAD EMPRESARIAL"
+        ]
+    },
+    {
+        "area": "ALMACENES",
+        "cedulas": [
+            "ALMACEN DE SUMINISTROS GENERALES",
+            "ALMACENES",
+            "ALMACENES LARGOS - TUBOS Y VIALES",
+            "ESTANDARIZACION"
+        ]
+    },
+    {
+        "area": "ASEGURAMIENTO DE LA CALIDAD",
+        "cedulas": [
+            "ASEGURAMIENTO DE LA CALIDAD",
+            "CONTROL DE ASEGURAMIENTO DE LA CALIDAD",
+            "LABORATORIO DE ANALISIS QUIMICO Y FRX",
+            "LABORATORIO ENSAYOS FISICOS",
+            "SISTEMAS DE GESTION"
+        ]
+    },
+    {
+        "area": "CADENA DE SUMINISTROS",
+        "cedulas": [
+            "CADENA DE SUMINISTROS"
+        ]
+    },
+    {
+        "area": "DESMONTAJE DE ACTIVOS",
+        "cedulas": [
+            "DESMONTAJE DE ACTIVOS"
+        ]
+    },
+    {
+        "area": "DISTRIBUCION",
+        "cedulas": [
+            "CENTRO PRODUCCION Y DIST. HUAROCHIRI",
+            "CENTROS DE DISTRIBUCION",
+            "DISTRIBUCION"
+        ]
+    },
+    {
+        "area:": "ENERGIA",
+        "cedulas": [
+            "ENERGIA",
+            "GESTION ENERGETICA",
+            "UTILIDADES"
+        ]
+    },
+    {
+        "area": "EXCELENCIA OPERACIONAL",
+        "cedulas": [
+            "EXCELENCIA OPERACIONAL"
+        ]
+    },
+    {
+        "area": "GESTION PERSONAS",
+        "cedulas": [
+            "BIENESTAR SOCIAL",
+            "GESTION PERSONAS"
+        ]
+    },
+    {
+        "area": "INDUSTRIAL",
+        "cedulas": [
+            "INDUSTRIAL"
+        ]
+    },
+    {
+        "area": "INGENIERIA",
+        "cedulas": [
+            "INGENIERIA",
+            "INGENIERIA DE MANTENIMIENTO",
+            "PLANEAMIENTO Y CONTROL INVERSIONES"
+        ]
+    },
+    {
+        "area": "LAMINACION LARGOS",
+        "cedulas": [
+            "APOYO LAMINACION LARGOS",
+            "HABILITADO DE PALANQUILLAS",
+            "LAMINACION LARGOS",
+            "LAMINADOR 1",
+            "LAMINADOR 2",
+            "MANTENIMIENTO ELECTRICO ELECTRONICO LARGOS",
+            "MANTENIMIENTO MECANICO LARGOS",
+            "PROCESOS AUXILIARES",
+            "TALLER CILINDROS Y GUIADOS"
+        ]
+    },
+    {
+        "area": "LOGISTICA TRANSPORTE Y MANTENIMIENTO",
+        "cedulas": [
+            "LOGISTICA TRANSPORTE Y MANTENIMIENTO",
+            "MANTENIMIENTO LOGISTICO",
+            "TRANSPORTE LOGISTICO"
+        ]
+    },
+    {
+        "area": "PERSONAS",
+        "cedulas": [
+            "PERSONAS"
+        ]
+    },
+    {
+        "area": "PLANEAMIENTO ESTRATEGICO",
+        "cedulas": [
+            "PLANEAMIENTO ESTRATEGICO"
+        ]
+    },
+    {
+        "area": "PLANEAMIENTO OPERACIONAL",
+        "cedulas": [
+            "PLANEAMIENTO OPERACIONAL"
+        ]
+    },
+    {
+        "area": "PLANTA TUBOS Y VIALES",
+        "cedulas": [
+            "APOYO TUBOS Y VIALES",
+            "GALVANIZADOS Y VIALES",
+            "MANTENIMIENTO ELECTRICO ELECTRONICO TUBOS Y VIALES",
+            "MANTENIMIENTO TUBOS Y VIALES",
+            "PLANTA TUBOS Y VIALES",
+            "TUBOS Y PERFILES"
+        ]
+    },
+    {
+        "area": "RESPONSABILIDAD SOCIAL Y CAPACITACION",
+        "cedulas": [
+            "CAPACITACION",
+            "RESPONSABILIDAD SOCIAL Y CAPACITACION"
+        ]
+    },
+    {
+        "area": "SALUD OCUPACIONAL",
+        "cedulas": [
+            "SALUD OCUPACIONAL"
+        ]
+    },
+    {
+        "area": "SEGURIDAD INDUSTRIAL Y GESTION AMBIENTAL",
+        "cedulas": [
+            "GESTION AMBIENTAL",
+            "SEGURIDAD INDUSTRIAL",
+            "SEGURIDAD INDUSTRIAL Y GESTION AMBIENTAL"
+        ]
+    },
+    {
+        "area": "SUMINISTROS IMPORTACION Y OP PORTUARIA",
+        "cedulas": [
+            "IMPORTACIONES DE ACERO & MP",
+            "OPERACIONES PORTUARIAS",
+            "SUMINISTROS GENERALES",
+            "SUMINISTROS IMPORTACIONES Y OP PORTUARIA"
+        ]
+    }
+]
+}
+
+
